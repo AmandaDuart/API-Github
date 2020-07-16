@@ -3,14 +3,11 @@ class RepositorioView {
         throw new Error("Erro não instanciado")
     }
 
-    static templateRepositorio(usuario) {
-        return `<img src = "${usuario.foto}" >
-                <div>
-                    <h1>${usuario.usuarioGit}</h1>
-                </div>
-                <div>
-                    <h1>${usuario.repositorio}</h1>
-                </div>
+    static templateRepositorio(repositorio) {
+        return `
+                <li>
+                    <h1>${repositorio.nome}</h1>
+                </li>
                `;
     }
 }

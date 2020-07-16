@@ -7,6 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Github </title>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Chewy&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -17,26 +18,32 @@
     <header>
         <div id="logo"></div>
         <div id="superior">
-            Github
+            <div class="inputform">
+                <input type="text" name="userInput" id="userInput" placeholder="Digite aqui o usuário ">
+                <button id="buttonPesquisar"><i class="fa fa-search"></i>  Pesquisar</button>
+            </div>
         </div>
     </header>
-    <div class="inputform">
-        <input type="text" name="userInput" id="userInput">
-        <button id="buttonPesquisar"><i class="fa fa-search"></i>  Pesquisar</button>
-    </div>
 
-    <div class="form">
-        <img id="imagem">
-    </div>
+
     <div id="usuarioGit"></div>
-    <div id="repositorio"></div>
-    <footer>Amanda Duarte </footer>
-    <script src="srcs/models/Usuario.js"></script>
-    <script src="srcs/views/UsuarioView.js"></script>
-    <script src="srcs/controllers/UsuarioController.js"></script>
-    <script src="main.js"></script>
-    <script src="srcs/controllers/RepositorioController.js"></script>
 
+    <div class="form"><img id="imagem"></div>
+
+    <div id="containerRepos">
+        <ul id="repositorio"></ul>
+    </div>
+
+    <footer>Amanda Duarte </footer>
+
+
+    <script src="srcs/models/Usuario.js"></script>
+    <script src="srcs/models/Repositorio.js"></script>
+    <script src="srcs/views/UsuarioView.js"></script>
+    <script src="srcs/views/RepositorioView.js"></script>
+    <script src="srcs/controllers/UsuarioController.js"></script>
+    <script src="srcs/controllers/RepositorioController.js"></script>
+    <script src="main.js"></script>
 </body>
 
 

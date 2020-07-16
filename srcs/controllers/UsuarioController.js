@@ -13,12 +13,11 @@
              if (requisicao.status == 200) {
                  let listaUsuarios = JSON.parse(requisicao.responseText);
 
-                 let usuario = new Usuario(listaUsuarios.avatar_url, listaUsuarios.login, listaUsuarios.repos_url);
+                 let usuario = new Usuario(listaUsuarios.avatar_url, listaUsuarios.login, listaUsuarios.followers, listaUsuarios.following);
 
                  let usuarioGit = document.getElementById('usuarioGit');
 
                  usuarioGit.innerHTML = UsuarioView.templateUsuario(usuario.retornaUsuario());
-                 console.log(usuario);
 
              }
          })
